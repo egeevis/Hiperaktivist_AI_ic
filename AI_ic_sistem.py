@@ -135,20 +135,43 @@ USER_TEMPLATE = """
 """.strip()
 
 def summarize_text(client, model: str, text: str, label: str) -> str:
-    chunks = chunk_text(text, 6000)
-    summary_parts = []
-    for chunk in chunks:
-        prompt = f"Metni 10 maddeyle kısa, öz ve bilgi kaybı olmadan özetle. Başlık: {label}.\n\nMetin:\n{chunk}"
-        resp = client.chat.completions.create(
+    """Büyük metinleri parça parça özetleyip final özet döndürür."""
+    chunks = chunk_text(text, max_chars=6000)
+    partial_summaries = []
+
+    # 1️⃣ Chunk bazlı özetleme
+    for idx, chunk in enumerate(chunks, start=1):
+        prompt = f"Bu metin bölümünü 5-6 maddeyle kısa ve öz şekilde özetle.\n\nBölüm {idx}/{len(chunks)}:\n{chunk}"
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "Kısa, net ve bilgi kaybı olmadan özetleyen bir yardımcı yazarsın."},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.2,
+            )
+            partial_summaries.append(resp.choices[0].message.content.strip())
+        except Exception as e:
+            partial_summaries.append(f"(Özetlenemedi: {e})")
+
+    # 2️⃣ Tüm özetleri final özetle birleştirme
+    combined_text = "\n".join(partial_summaries)
+    final_prompt = f"Aşağıdaki parça özetleri kullanarak '{label}' başlıklı 10-12 maddelik nihai bir özet hazırla:\n\n{combined_text}"
+    
+    try:
+        final_resp = client.chat.completions.create(
             model=model,
             messages=[
-                {"role": "system", "content": "Kısa ve bilgi kaybı olmadan özetleyen bir yardımcı yazarsın."},
-                {"role": "user", "content": prompt},
+                {"role": "system", "content": "Metinleri birleştirip kısa, net ve bilgi kaybı olmadan özetleyen bir yardımcı yazarsın."},
+                {"role": "user", "content": final_prompt},
             ],
             temperature=0.2,
         )
-        summary_parts.append(resp.choices[0].message.content.strip())
-    return "\n".join(summary_parts)
+        return final_resp.choices[0].message.content.strip()
+    except Exception as e:
+        return f"(Final özetlenemedi: {e})"
+
 
 def generate_questions(client, model: str, system_prompt: str, user_prompt: str, temperature: float = 0.4) -> Dict[str, Any]:
     resp = client.chat.completions.create(
