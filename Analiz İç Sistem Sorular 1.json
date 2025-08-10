@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "education_title": "Bağımlılık ve Kurtulma Süreçleri",
+    "num_questions": 20,
+    "language": "tr",
+    "technique_weights": {
+      "duyusal_enteg": 50,
+      "hikaye": 50,
+      "paradoksal": 50,
+      "sokratik": 50,
+      "kontrast": 50,
+      "ga_dili": 50,
+      "somut": 50,
+      "sok_giris": 50,
+      "eylem_kapanis": 50
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Bağımlılık kavramını sizin için en anlamlı hale getiren deneyiminiz nedir?",
+      "category": "Deneyim",
+      "target_signal": "Kişisel içgörüler",
+      "why_this": "Kişisel deneyimlerin paylaşılması, bağımlılığın derinlemesine anlaşılmasına yardımcı olur.",
+      "technique_tags": [
+        "sokratik",
+        "hikaye"
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Bağlanma eksikliğinin bağımlılık üzerindeki etkilerini nasıl tanımlarsınız?",
+      "category": "Analiz",
+      "target_signal": "Nörobilimsel anlayış",
+      "why_this": "Bağlanma eksikliğinin bağımlılığa etkisi üzerine düşünmek, katılımcıların konuyu derinlemesine incelemesine olanak tanır.",
+      "technique_tags": [
+        "kontrast",
+        "sokratik"
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Bağımlılıkla mücadelede sosyal destek mekanizmalarının rolü sizce nedir?",
+      "category": "Görüş",
+      "target_signal": "Sosyal etkileşim",
+      "why_this": "Sosyal destek mekanizmalarının önemini vurgulamak, katılımcıların bu konudaki farkındalığını artırır.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "Kendi hayatınızda 'adını koyamadığınız bağlılıklar' nelerdir?",
+      "category": "Kendini Tanıma",
+      "target_signal": "Farkındalık",
+      "why_this": "Bireylerin kendi bağımlılıklarını keşfetmeleri, iyileşme sürecinin ilk adımıdır.",
+      "technique_tags": [
+        "hikaye",
+        "somut"
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "Meditasyon ve içsel çalışmaların bağımlılıkla başa çıkmadaki etkilerini nasıl değerlendirirsiniz?",
+      "category": "Değerlendirme",
+      "target_signal": "İçsel duygular",
+      "why_this": "Meditasyonun etkilerini değerlendirmek, katılımcıların kendi deneyimlerini paylaşmalarını teşvik eder.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "sokratik"
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Bağımlılığın travma ile ilişkisini nasıl yorumluyorsunuz?",
+      "category": "Yorum",
+      "target_signal": "Kavramların derinlemesine analizi",
+      "why_this": "Travmanın bağımlılıkla ilişkisini anlamak, katılımcıların konuyu daha derinlemesine incelemesine olanak tanır.",
+      "technique_tags": [
+        "kontrast",
+        "sokratik"
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "Bağımlılık sürecinde karşılaştığınız en büyük zorluk neydi?",
+      "category": "Deneyim",
+      "target_signal": "Kişisel zorluklar",
+      "why_this": "Kişisel zorlukların paylaşılması, grup içinde empati ve destek oluşturur.",
+      "technique_tags": [
+        "hikaye",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "Duygusal ihtiyaçlarınızı tanıma sürecinde hangi adımları attınız?",
+      "category": "Kendini Tanıma",
+      "target_signal": "Farkındalık",
+      "why_this": "Duygusal ihtiyaçların tanınması, iyileşme sürecinin önemli bir parçasıdır.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "somut"
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "Bağımlılıkla ilgili toplumsal stigma ile nasıl başa çıkıyorsunuz?",
+      "category": "Strateji",
+      "target_signal": "Toplumsal etkileşim",
+      "why_this": "Stigma ile başa çıkma stratejileri, katılımcıların toplumsal baskılarla başa çıkmalarına yardımcı olur.",
+      "technique_tags": [
+        "kontrast",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "Nüks ve tetikleyicilerle başa çıkma stratejilerinizi paylaşır mısınız?",
+      "category": "Strateji",
+      "target_signal": "Kişisel stratejiler",
+      "why_this": "Nüks ile başa çıkma stratejilerinin paylaşılması, grup içinde öğrenmeyi teşvik eder.",
+      "technique_tags": [
+        "sokratik",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "Bağımlılıkla ilgili en çok hangi bilgileri öğrenmek istiyorsunuz?",
+      "category": "İlgi Alanları",
+      "target_signal": "Öğrenme motivasyonu",
+      "why_this": "Katılımcıların ilgi alanlarını belirlemek, eğitim sürecini daha etkili hale getirir.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "somut"
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "Bağımlılığın sosyal bağ kurma yeteneği üzerindeki etkilerini nasıl açıklarsınız?",
+      "category": "Analiz",
+      "target_signal": "Kavramların derinlemesine analizi",
+      "why_this": "Sosyal bağ kurmanın bağımlılık üzerindeki etkilerini anlamak, katılımcıların konuyu daha iyi kavramalarına yardımcı olur.",
+      "technique_tags": [
+        "kontrast",
+        "sokratik"
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "Bağımlılıkla mücadelede hangi eylem adımlarını atmayı düşünüyorsunuz?",
+      "category": "Eylem Planı",
+      "target_signal": "Gelecek hedefleri",
+      "why_this": "Katılımcıların eylem planı oluşturması, öğrenilen bilgilerin pratiğe dökülmesine yardımcı olur.",
+      "technique_tags": [
+        "eylem_kapanis",
+        "somut"
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "Bağımlılığın köklerini keşfetme sürecinde hangi içgörüler elde ettiniz?",
+      "category": "İçgörü",
+      "target_signal": "Kişisel farkındalık",
+      "why_this": "Kendi içgörülerinizi paylaşmak, grup içinde derin bir tartışma ortamı oluşturur.",
+      "technique_tags": [
+        "hikaye",
+        "sokratik"
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "Bağımlılıkla ilgili en çok hangi yanlış anlamalara maruz kaldınız?",
+      "category": "Yanlış Anlamalar",
+      "target_signal": "Toplumsal algılar",
+      "why_this": "Yanlış anlamaların paylaşılması, toplumsal farkındalığı artırır.",
+      "technique_tags": [
+        "kontrast",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "Bağımlılık sürecinde kendinize nasıl şefkat gösteriyorsunuz?",
+      "category": "Şefkat",
+      "target_signal": "Duygusal iyilik hali",
+      "why_this": "Kendine şefkat gösterme, iyileşme sürecinin önemli bir parçasıdır.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "somut"
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "Bağımlılıkla ilgili en çok hangi kaynaklardan faydalandınız?",
+      "category": "Kaynaklar",
+      "target_signal": "Bilgi edinme",
+      "why_this": "Kaynakların paylaşılması, grup içinde bilgi alışverişini teşvik eder.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "Bağımlılık sürecinde yaşadığınız en büyük başarı nedir?",
+      "category": "Başarılar",
+      "target_signal": "Motivasyon",
+      "why_this": "Başarıların paylaşılması, grup içinde motivasyonu artırır.",
+      "technique_tags": [
+        "hikaye",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "Bağımlılıkla mücadelede en çok hangi destek sistemlerine ihtiyaç duyuyorsunuz?",
+      "category": "Destek Sistemleri",
+      "target_signal": "Gelecek hedefleri",
+      "why_this": "Destek sistemlerinin belirlenmesi, katılımcıların ihtiyaçlarını anlamalarına yardımcı olur.",
+      "technique_tags": [
+        "sokratik",
+        "eylem_kapanis"
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "Bağımlılıkla ilgili en çok hangi kavramları merak ediyorsunuz?",
+      "category": "Merak",
+      "target_signal": "Öğrenme motivasyonu",
+      "why_this": "Katılımcıların merak ettikleri kavramları belirlemek, eğitim sürecini daha etkili hale getirir.",
+      "technique_tags": [
+        "duyusal_enteg",
+        "somut"
+      ]
+    }
+  ]
+}

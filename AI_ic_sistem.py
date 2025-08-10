@@ -124,7 +124,7 @@ USER_TEMPLATE = """
 # EĞİTİM ÖZETİ
 {education_summary}
 
-# TEKNİK & YÖNTEMLER ÖZETİ
+# TEKNİK &aaaaa YÖNTEMLER ÖZETİ
 {techniques_summary}
 
 # TEKNİK AĞIRLIKLARI
