@@ -3,7 +3,7 @@ import io
 import json
 from typing import List, Dict, Any
 import openai
-st.sidebar.write("OpenAI version:", openai.__version__)
+
 
 
 
@@ -18,6 +18,9 @@ load_dotenv()
 # PyPDF2
 # openai>=1.30.0
 # jsonschema
+st.sidebar.write("OpenAI version:", openai.__version__)
+
+
 
 try:
     from docx import Document  # python-docx
