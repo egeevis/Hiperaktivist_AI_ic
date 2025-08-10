@@ -301,9 +301,10 @@ if ty_file:
 # LLM CLIENT
 # ------------------------------
 client = None
-if openai_key and OpenAI:
+if openai_key:
     try:
-        client = OpenAI(api_key=openai_key)
+        openai.api_key = openai_key
+        client = openai  # Doğrudan openai modülünü kullan
     except Exception as e:
         st.sidebar.error(f"OpenAI istemcisi başlatılamadı: {e}")
 
