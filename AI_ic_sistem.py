@@ -264,7 +264,7 @@ def questions_table(data: Dict[str, Any]):
 # ------------------------------
 st.sidebar.header("Ayarlar")
 openai_key = st.sidebar.text_input("OpenAI API Key", type="password", value=os.environ.get("OPENAI_API_KEY", ""))
-model = st.sidebar.text_input("Model", value="gpt-4o-mini")
+model = st.sidebar.text_input("Model", value="gpt-5-mini")
 num_questions = st.sidebar.number_input("Soru sayısı", min_value=5, max_value=40, value=20, step=1)
 temperature = st.sidebar.slider("Temperature", 0.0, 1.0, 0.4, 0.05)
 language = st.sidebar.selectbox("Dil", ["Türkçe", "English"], index=0)
