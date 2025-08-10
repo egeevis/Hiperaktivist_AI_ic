@@ -1,6 +1,11 @@
-streamlit
+# Ana bağımlılıklar
+streamlit>=1.37.0
 python-docx
 PyPDF2
-openai==1.43.0
 jsonschema
+
+# OpenAI SDK (Responses API ve gpt-5-mini desteği için)
+openai>=1.50.0
+
+# Ortam değişkenleri için
 python-dotenv
