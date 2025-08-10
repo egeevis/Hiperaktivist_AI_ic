@@ -1,6 +1,6 @@
 streamlit
 python-docx
 PyPDF2
-openai>=1.42.0
+openai==1.43.0
 jsonschema
 python-dotenv

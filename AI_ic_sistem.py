@@ -6,6 +6,7 @@ import openai
 st.sidebar.write("OpenAI version:", openai.__version__)
 
 
+
 import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
