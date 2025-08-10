@@ -189,21 +189,27 @@ def summarize_text(client, model: str, text: str, label: str) -> str:
 
 
 def generate_questions(client, model: str, system_prompt: str, user_prompt: str, temperature: float = 0.4) -> Dict[str, Any]:
-    resp = client.chat.completions.create(
+    resp = client.responses.create(
         model=model,
-        messages=[
+        temperature=temperature,
+        input=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
         ],
-        temperature=temperature,
-        response_format={"type": "json_object"},
+        response_format={
+            "type": "json_schema",
+            "json_schema": {
+                "name": "questions_schema",
+                "schema": QUESTION_SCHEMA,
+                "strict": True
+            }
+        }
     )
-    content = resp.choices[0].message.content
+    # json_schema modunda model çıktısı zaten Python dict olarak gelir
     try:
-        data = json.loads(content)
+        return resp.output_parsed
     except Exception:
-        data = {"raw": content}
-    return data
+        return {"raw": resp.output_text}
 
 
 def technique_weight_sidebar() -> Dict[str, int]:
