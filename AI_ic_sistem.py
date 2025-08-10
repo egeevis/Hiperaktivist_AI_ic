@@ -166,17 +166,36 @@ ty_text = read_file(ty_file) if ty_file else ""
 # Özetleme Fonksiyonu
 # ------------------------------
 def summarize_text(text: str, label: str) -> str:
-    if not client: return ""
-    prompt = f"Metni 10 maddede kısa ve net özetle. Başlık: {label}.\n\nMetin:\n{text[:12000]}"
-    resp = client.chat.completions.create(
+    if not client: 
+        return ""
+    
+    chunks = chunk_text(text, max_chars=4000)  # Küçük parçalar
+    summaries = []
+
+    for i, chunk in enumerate(chunks):
+        prompt = f"Metni 5 maddede kısa ve net özetle. Bölüm {i+1}/{len(chunks)}. Başlık: {label}.\n\nMetin:\n{chunk}"
+        resp = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": "Sen kısa ve net özetleyen bir asistansın."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.2,
+        )
+        summaries.append(resp.choices[0].message.content.strip())
+
+    # Son özetleme
+    final_prompt = f"Tüm özetleri birleştir ve 10 maddede nihai özet oluştur. Başlık: {label}.\n\nÖzetler:\n" + "\n".join(summaries)
+    final_resp = client.chat.completions.create(
         model=model,
         messages=[
             {"role": "system", "content": "Sen kısa ve net özetleyen bir asistansın."},
-            {"role": "user", "content": prompt},
+            {"role": "user", "content": final_prompt},
         ],
         temperature=0.2,
     )
-    return resp.choices[0].message.content.strip()
+    return final_resp.choices[0].message.content.strip()
+
 
 # ------------------------------
 # Soru Üretme Fonksiyonu
