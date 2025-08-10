@@ -2,6 +2,9 @@ import os
 import io
 import json
 from typing import List, Dict, Any
+import openai
+st.sidebar.write("OpenAI version:", openai.__version__)
+
 
 import streamlit as st
 from dotenv import load_dotenv
